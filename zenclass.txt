@@ -1,0 +1,32 @@
+1.db.zen.find(
+    {topics,tasks},
+    { "month": 10 }
+)
+
+2. db.zen.find(
+{companydrives},
+{"whenCreated": {
+    '$gte': ISODate("2020-10-15"),
+    '$lt': ISODate("2020-10-31")
+}})
+
+3. db.zen.find(
+    {companydrives,users},
+    { "placement": "Y" }
+)
+
+4. db.zen.aggregate([{$group : {_id : "$user", codekata : {$sum : 1}}}])
+
+5. db.zen.find(
+  {mentors},
+  {"whenCreated": {
+    '$gte': ISODate("2020-10-15"),
+    
+ 6.db.zen.aggregate([
+  {$group : {_id : "$mentor", student_count : {$cont : "$student"}}},
+  { $match: { student_count : { $gt: 15} } }])
+  
+  
+ 
+  
+ 
