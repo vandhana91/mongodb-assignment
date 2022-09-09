@@ -1,0 +1,15 @@
+products
+
+1.db.product.find( {} )
+
+2. db.product.find({
+        'price': { '$gt': 400, '$lt': 800}
+})
+
+3. db.product.find({salary: {$not: {$gt: 400,'$lt': 600}}}).pretty()
+
+4.db.product.find('price': { '$gt': 500}.limit(4).pretty();
+
+5. db.product.find({product,product material})
+
+6.db.product.find({product}, {_id: 10})
